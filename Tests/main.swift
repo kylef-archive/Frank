@@ -1,1 +1,3 @@
 testApplication()
+testParameterParser()
+testParameterConvertible()

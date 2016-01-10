@@ -9,9 +9,11 @@ endif
 
 LIBS=Frank Curassow Commander Inquiline Nest
 TEST_LIBS=$(LIBS) Spectre
+GENERATE_LIBS=$(LIBS) PathKit Stencil
 
 SWIFT_ARGS=$(foreach lib,$(LIBS),-Xlinker .build/debug/$(lib).a)
 TEST_SWIFT_ARGS=$(foreach lib,$(TEST_LIBS),-Xlinker .build/debug/$(lib).a)
+GENERATE_SWIFT_ARGS=$(foreach lib,$(GENERATE_LIBS),-Xlinker .build/debug/$(lib).a)
 
 frank:
 	@echo "Building Frank"
@@ -25,3 +27,12 @@ example: frank
 		example/example.swift \
 		-I.build/debug \
 		$(SWIFT_ARGS)
+
+generator: frank
+	@$(SWIFTC) -o Generate/generator \
+		Generate/main.swift \
+		-I.build/debug \
+		$(GENERATE_SWIFT_ARGS)
+
+generate: generator
+	Generate/generator

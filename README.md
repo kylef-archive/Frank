@@ -1,14 +1,21 @@
 # Frank
 
-Frank is a DSL for quickly writing web applications in Swift.
+Frank is a DSL for quickly writing web applications in Swift with type-safe
+path routing.
 
 ##### `Sources/main.swift`
 
 ```swift
 import Frank
 
-get("/") { _ in
+// Handle GET requests to path /
+get {
   return "Hello World"
+}
+
+// Handle GET requests to path /{username}
+get(*) { (username: String) in
+  return "Hello \(username)"
 }
 ```
 
@@ -45,30 +52,43 @@ Routes are matched in the order they are defined. The first route that matches
 the request is invoked.
 
 ```swift
-post("/") {
+get {
   ...
 }
 
-put("/") {
+put {
   ...
 }
 
-patch("/") {
+patch {
   ...
 }
 
-delete("/") {
+delete {
   ...
 }
 
-head("/") {
+head {
   ...
 }
 
-options("/") {
+options {
   ...
 }
 ```
+
+You may pass path components along with wildcard (`*`) to match variables in
+paths.
+
+```swift
+get("users", *) { (request, username: String) in
+  return "Hi \(username)"
+}
+```
+
+Wildcard parameters may be of any type that conforms to `ParameterConvertible`,
+this allows you to match against custom types providing you conform to
+`ParameterConvertible`.
 
 #### Return Values
 
@@ -77,7 +97,7 @@ The return value of route blocks takes a type that conforms to the
 Convertible. For example, you can return a simple string:
 
 ```swift
-get("/") {
+get {
   return "Hello World"
 }
 ```
@@ -85,11 +105,11 @@ get("/") {
 Return a full response:
 
 ```swift
-get("/") {
+get {
   return Response(.Ok, headers: ["Custom-Header": "value"])
 }
 
-post("/") {
+post {
   return Response(.Created, body: "User created")
 }
 ```
@@ -122,7 +142,7 @@ func stencil(path: String, _ context: [String: Any]? = nil) -> ResponseConvertib
 Which can easily be called from your route to render a template:
 
 ```swift
-get("/") {
+get {
   return stencil("hello.html", ["user": "world"])
 }
 ```
@@ -147,7 +167,7 @@ be passed to a server of your choice.
 ```swift
 import Frank
 
-get("/") {
+get {
   return "Custom Server"
 }
 

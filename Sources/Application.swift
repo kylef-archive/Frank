@@ -2,7 +2,6 @@ import Nest
 import Inquiline
 
 
-
 class Application {
   var routes: [Route] = []
 
@@ -28,46 +27,20 @@ class Application {
     return Response(.NotFound)
   }
 
+  /// Register a route for the given method and path
   func route(method: String, _ path: String, _ closure: RequestType -> ResponseConvertible) {
-    let match: (RequestType -> (Void -> ResponseConvertible)?) = { request in
-      if request.path == path {
-        return {
-          closure(request)
-        }
+    route(method) { request in
+      if path == request.path {
+        return { closure(request) }
       }
 
       return nil
     }
+  }
 
+  /// Register a route using a matcher closure
+  func route(method: String, _ match: RequestType -> Route.Handler?) {
     let route = Route(method: method, match: match)
     routes.append(route)
-  }
-
-  func get(path: String, _ closure: RequestType -> ResponseConvertible) {
-    route("GET", path, closure)
-  }
-
-  func post(path: String, _ closure: RequestType -> ResponseConvertible) {
-    route("POST", path, closure)
-  }
-
-  func put(path: String, _ closure: RequestType -> ResponseConvertible) {
-    route("PUT", path, closure)
-  }
-
-  func patch(path: String, _ closure: RequestType -> ResponseConvertible) {
-    route("PATCH", path, closure)
-  }
-
-  func delete(path: String, _ closure: RequestType -> ResponseConvertible) {
-    route("DELETE", path, closure)
-  }
-
-  func head(path: String, _ closure: RequestType -> ResponseConvertible) {
-    route("HEAD", path, closure)
-  }
-
-  func options(path: String, _ closure: RequestType -> ResponseConvertible) {
-    route("OPTIONS", path, closure)
   }
 }
