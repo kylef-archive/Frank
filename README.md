@@ -1,5 +1,7 @@
 # Frank
 
+[![Build Status](https://travis-ci.org/nestproject/Frank.svg?branch=master)](https://travis-ci.org/nestproject/Frank)
+
 Frank is a DSL for quickly writing web applications in Swift.
 
 ##### `Sources/main.swift`
