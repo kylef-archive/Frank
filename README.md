@@ -7,7 +7,7 @@ Frank is a DSL for quickly writing web applications in Swift.
 ```swift
 import Frank
 
-get("/") {
+get("/") { _ in
   return "Hello World"
 }
 ```
