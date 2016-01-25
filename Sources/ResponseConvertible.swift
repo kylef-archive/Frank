@@ -13,3 +13,10 @@ extension String : ResponseConvertible {
     return Response(.Ok, body: self)
   }
 }
+
+
+extension Response : ResponseConvertible {
+  public func asResponse() -> ResponseType {
+    return self
+  }
+}
