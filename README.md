@@ -94,6 +94,49 @@ post("/") {
 }
 ```
 
+#### Templates
+
+##### Stencil
+
+You can easily use the [Stencil](https://github.com/kylef/Stencil) template
+language with Frank. For example, you can create a convenience function to
+render templates (called `stencil`):
+
+```swift
+import Stencil
+import Inquiline
+import PathKit
+
+
+func stencil(path: String, _ context: [String: Any]? = nil) -> ResponseConvertible {
+  do {
+    let template = try Template(path: Path(path))
+    let body = try template.render(Context(dictionary: context))
+    return Response(.Ok, headers: [("Content-Type", "text/html")], body: body)
+  } catch {
+    return Response(.InternalServerError)
+  }
+}
+```
+
+Which can easily be called from your route to render a template:
+
+```swift
+get("/") {
+  return stencil("hello.html", ["user": "world"])
+}
+```
+
+###### `hello.swift`
+
+```html+django
+<html>
+  <body>
+    Hello {{ user }}!
+  </body>
+</html>
+```
+
 ### Nest
 
 Frank is design around the [Nest](https://github.com/nestproject/Nest) Swift
