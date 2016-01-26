@@ -2,13 +2,15 @@ import Nest
 import Inquiline
 
 
+public typealias ParameterType = [String : String]
+public typealias RouteHandler = (RequestType, ParameterType) -> ResponseConvertible
 
 struct Route {
   let method: String
   let path: String
-  let closure: RequestType -> ResponseConvertible
+  let closure: RouteHandler
 
-  init(method: String, path: String, closure: RequestType -> ResponseConvertible) {
+  init(method: String, path: String, closure: RouteHandler) {
     self.method = method
     self.path = path
     self.closure = closure
@@ -24,7 +26,9 @@ class Application {
     let route = routes.filter { $0.method == request.method }.first
 
     if let route = route {
-      return route.closure(request).asResponse()
+      let parameters = [String : String]()
+
+      return route.closure(request, parameters).asResponse()
     }
 
     if !routes.isEmpty {
@@ -34,36 +38,36 @@ class Application {
     return Response(.NotFound)
   }
 
-  func route(method: String, _ path: String, _ closure: RequestType -> ResponseConvertible) {
+  func route(method: String, _ path: String, _ closure: RouteHandler) {
     let route = Route(method: method, path: path, closure: closure)
     routes.append(route)
   }
 
-  func get(path: String, _ closure: RequestType -> ResponseConvertible) {
+  func get(path: String, _ closure: RouteHandler) {
     route("GET", path, closure)
   }
 
-  func post(path: String, _ closure: RequestType -> ResponseConvertible) {
+  func post(path: String, _ closure: RouteHandler) {
     route("POST", path, closure)
   }
 
-  func put(path: String, _ closure: RequestType -> ResponseConvertible) {
+  func put(path: String, _ closure: RouteHandler) {
     route("PUT", path, closure)
   }
 
-  func patch(path: String, _ closure: RequestType -> ResponseConvertible) {
+  func patch(path: String, _ closure: RouteHandler) {
     route("PATCH", path, closure)
   }
 
-  func delete(path: String, _ closure: RequestType -> ResponseConvertible) {
+  func delete(path: String, _ closure: RouteHandler) {
     route("DELETE", path, closure)
   }
 
-  func head(path: String, _ closure: RequestType -> ResponseConvertible) {
+  func head(path: String, _ closure: RouteHandler) {
     route("HEAD", path, closure)
   }
 
-  func options(path: String, _ closure: RequestType -> ResponseConvertible) {
+  func options(path: String, _ closure: RouteHandler) {
     route("OPTIONS", path, closure)
   }
 }
