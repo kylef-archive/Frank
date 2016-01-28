@@ -3,28 +3,22 @@ import Inquiline
 
 
 
-struct Route {
-  let method: String
-  let path: String
-  let closure: RequestType -> ResponseConvertible
-
-  init(method: String, path: String, closure: RequestType -> ResponseConvertible) {
-    self.method = method
-    self.path = path
-    self.closure = closure
-  }
-}
-
-
 class Application {
   var routes: [Route] = []
 
   func call(request: RequestType) -> ResponseType {
-    let routes = self.routes.filter { $0.path == request.path }
-    let route = routes.filter { $0.method == request.method }.first
+    let routes = self.routes.flatMap { route -> (String, Route.Handler)? in
+      if let match = route.match(request) {
+        return (route.method, match)
+      }
 
-    if let route = route {
-      return route.closure(request).asResponse()
+      return nil
+    }
+
+    let route = routes.filter { method, _ in method == request.method }.first
+
+    if let (_, handler) = route {
+      return handler().asResponse()
     }
 
     if !routes.isEmpty {
@@ -35,7 +29,17 @@ class Application {
   }
 
   func route(method: String, _ path: String, _ closure: RequestType -> ResponseConvertible) {
-    let route = Route(method: method, path: path, closure: closure)
+    let match: (RequestType -> (Void -> ResponseConvertible)?) = { request in
+      if request.path == path {
+        return {
+          closure(request)
+        }
+      }
+
+      return nil
+    }
+
+    let route = Route(method: method, match: match)
     routes.append(route)
   }
 
