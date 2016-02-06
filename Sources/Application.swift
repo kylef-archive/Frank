@@ -1,33 +1,18 @@
 import Nest
 import Inquiline
 
-
 public typealias ParameterType = [String : String]
 public typealias RouteHandler = (RequestType, ParameterType) -> ResponseConvertible
-
-struct Route {
-  let method: String
-  let path: String
-  let closure: RouteHandler
-
-  init(method: String, path: String, closure: RouteHandler) {
-    self.method = method
-    self.path = path
-    self.closure = closure
-  }
-}
-
 
 class Application {
   var routes: [Route] = []
 
   func call(request: RequestType) -> ResponseType {
-    let routes = self.routes.filter { $0.path == request.path }
-    let route = routes.filter { $0.method == request.method }.first
+		let routes = self.routes.filter { $0.path.matches(request.path) }
+		let route = routes.filter { $0.method == request.method }.first
 
     if let route = route {
-      let parameters = [String : String]()
-
+      let parameters = route.path.extract(fromString: request.path)
       return route.closure(request, parameters).asResponse()
     }
 
