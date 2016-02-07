@@ -72,8 +72,7 @@ struct Path {
     let zipped = zip(components, stringComponents)
     for (a, b) in zipped {
       guard a.isDynamic else { continue }
-      let key = a.value
-      params[key] = b
+      params[a.value] = b
     }
 
     return params
@@ -88,8 +87,7 @@ struct Path {
     let zipped = zip(components, stringComponents)
     for (a, b) in zipped {
       guard a.isStatic else { continue }
-      let value = a.value
-      guard value == b else { return false }
+      guard a.value == b else { return false }
     }
 
     return true				
