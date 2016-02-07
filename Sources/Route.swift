@@ -63,11 +63,12 @@ struct Path {
   }
 
   func extract(fromString string: String) -> [String : String] {
+    guard !isStatic else { return [String : String]() }
+
     let stringComponents = string.pathComponents
     guard components.count == stringComponents.count else { return [String : String]() }
 
     var params = [String : String]()
-
     let zipped = zip(components, stringComponents)
     for (a, b) in zipped {
       guard a.isDynamic else { continue }
@@ -79,6 +80,8 @@ struct Path {
   }
 
   func matches(string: String) -> Bool {
+    guard !isStatic else { return self.path == string }
+
     let stringComponents = string.pathComponents
     guard components.count == stringComponents.count else { return false }
 
