@@ -24,41 +24,41 @@ public func call(request: RequestType) -> ResponseType {
 }
 
 
-public func route(method: String, _ path: String, _ closure: RequestType -> ResponseConvertible) {
+public func route(method: String, _ path: String, _ closure: RouteHandler) {
   application.route(method, path, closure)
 }
 
 
-public func get(path: String, closure: RequestType -> ResponseConvertible) {
+public func get(path: String, closure: RouteHandler) {
   application.get(path, closure)
 }
 
 
-func post(path: String, closure: RequestType -> ResponseConvertible) {
+func post(path: String, closure: RouteHandler) {
   application.post(path, closure)
 }
 
 
-func put(path: String, closure: RequestType -> ResponseConvertible) {
+func put(path: String, closure: RouteHandler) {
   application.put(path, closure)
 }
 
 
-func patch(path: String, closure: RequestType -> ResponseConvertible) {
+func patch(path: String, closure: RouteHandler) {
   application.patch(path, closure)
 }
 
 
-func delete(path: String, closure: RequestType -> ResponseConvertible) {
+func delete(path: String, closure: RouteHandler) {
   application.delete(path, closure)
 }
 
 
-func head(path: String, closure: RequestType -> ResponseConvertible) {
+func head(path: String, closure: RouteHandler) {
   application.head(path, closure)
 }
 
 
-func options(path: String, closure: RequestType -> ResponseConvertible) {
+func options(path: String, closure: RouteHandler) {
   application.options(path, closure)
 }
