@@ -20,7 +20,7 @@ func validateParameter(parser: ParameterParser, _ value: String) -> String? {
 extension Application {
 
   /// GET /
-  public func get(closure: RequestType -> ResponseConvertible) {
+  func get(closure: RequestType -> ResponseConvertible) {
     route("GET") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -32,7 +32,7 @@ extension Application {
 
 
   /// GET
-  public func get<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -50,7 +50,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -69,7 +69,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -89,7 +89,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -110,7 +110,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -132,7 +132,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -154,7 +154,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -175,7 +175,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -197,7 +197,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -219,7 +219,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -239,7 +239,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -260,7 +260,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -282,7 +282,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -304,7 +304,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -325,7 +325,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -347,7 +347,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -369,7 +369,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -388,7 +388,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -408,7 +408,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -429,7 +429,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -451,7 +451,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -473,7 +473,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -494,7 +494,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -516,7 +516,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -538,7 +538,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -558,7 +558,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -579,7 +579,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -601,7 +601,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -623,7 +623,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -644,7 +644,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -666,7 +666,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -688,7 +688,7 @@ extension Application {
   }
 
   /// GET
-  public func get(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func get(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -706,7 +706,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -725,7 +725,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -745,7 +745,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -766,7 +766,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -788,7 +788,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -810,7 +810,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -831,7 +831,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -853,7 +853,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -875,7 +875,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -895,7 +895,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -916,7 +916,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -938,7 +938,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -960,7 +960,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -981,7 +981,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1003,7 +1003,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1025,7 +1025,7 @@ extension Application {
   }
 
   /// GET
-  public func get(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func get(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1044,7 +1044,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1064,7 +1064,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func get<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1085,7 +1085,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
+  func get<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1107,7 +1107,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func get<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1129,7 +1129,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1150,7 +1150,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
+  func get<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1172,7 +1172,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1194,7 +1194,7 @@ extension Application {
   }
 
   /// GET
-  public func get(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func get(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1214,7 +1214,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func get<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1235,7 +1235,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
+  func get<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1257,7 +1257,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func get<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1279,7 +1279,7 @@ extension Application {
   }
 
   /// GET
-  public func get(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func get(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1300,7 +1300,7 @@ extension Application {
   }
 
   /// GET
-  public func get<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
+  func get<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1322,7 +1322,7 @@ extension Application {
   }
 
   /// GET
-  public func get(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func get(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("GET") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1345,7 +1345,7 @@ extension Application {
 
 
   /// HEAD /
-  public func head(closure: RequestType -> ResponseConvertible) {
+  func head(closure: RequestType -> ResponseConvertible) {
     route("HEAD") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -1357,7 +1357,7 @@ extension Application {
 
 
   /// HEAD
-  public func head<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1375,7 +1375,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1394,7 +1394,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1414,7 +1414,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1435,7 +1435,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1457,7 +1457,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1479,7 +1479,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1500,7 +1500,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1522,7 +1522,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1544,7 +1544,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1564,7 +1564,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1585,7 +1585,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1607,7 +1607,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1629,7 +1629,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1650,7 +1650,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1672,7 +1672,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1694,7 +1694,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1713,7 +1713,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1733,7 +1733,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1754,7 +1754,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1776,7 +1776,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1798,7 +1798,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1819,7 +1819,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1841,7 +1841,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1863,7 +1863,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1883,7 +1883,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1904,7 +1904,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1926,7 +1926,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1948,7 +1948,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1969,7 +1969,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -1991,7 +1991,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2013,7 +2013,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func head(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2031,7 +2031,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2050,7 +2050,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2070,7 +2070,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2091,7 +2091,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2113,7 +2113,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2135,7 +2135,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2156,7 +2156,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2178,7 +2178,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2200,7 +2200,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2220,7 +2220,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2241,7 +2241,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2263,7 +2263,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2285,7 +2285,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2306,7 +2306,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2328,7 +2328,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2350,7 +2350,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func head(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2369,7 +2369,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2389,7 +2389,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func head<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2410,7 +2410,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
+  func head<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2432,7 +2432,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func head<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2454,7 +2454,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2475,7 +2475,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
+  func head<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2497,7 +2497,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2519,7 +2519,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func head(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2539,7 +2539,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func head<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2560,7 +2560,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
+  func head<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2582,7 +2582,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func head<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2604,7 +2604,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func head(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2625,7 +2625,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
+  func head<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2647,7 +2647,7 @@ extension Application {
   }
 
   /// HEAD
-  public func head(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func head(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("HEAD") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2670,7 +2670,7 @@ extension Application {
 
 
   /// PUT /
-  public func put(closure: RequestType -> ResponseConvertible) {
+  func put(closure: RequestType -> ResponseConvertible) {
     route("PUT") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -2682,7 +2682,7 @@ extension Application {
 
 
   /// PUT
-  public func put<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2700,7 +2700,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2719,7 +2719,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2739,7 +2739,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2760,7 +2760,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2782,7 +2782,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2804,7 +2804,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2825,7 +2825,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2847,7 +2847,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2869,7 +2869,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2889,7 +2889,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2910,7 +2910,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2932,7 +2932,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2954,7 +2954,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2975,7 +2975,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -2997,7 +2997,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3019,7 +3019,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3038,7 +3038,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3058,7 +3058,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3079,7 +3079,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3101,7 +3101,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3123,7 +3123,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3144,7 +3144,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3166,7 +3166,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3188,7 +3188,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3208,7 +3208,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3229,7 +3229,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3251,7 +3251,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3273,7 +3273,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3294,7 +3294,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3316,7 +3316,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3338,7 +3338,7 @@ extension Application {
   }
 
   /// PUT
-  public func put(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func put(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3356,7 +3356,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3375,7 +3375,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3395,7 +3395,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3416,7 +3416,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3438,7 +3438,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3460,7 +3460,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3481,7 +3481,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3503,7 +3503,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3525,7 +3525,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3545,7 +3545,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3566,7 +3566,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3588,7 +3588,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3610,7 +3610,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3631,7 +3631,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3653,7 +3653,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3675,7 +3675,7 @@ extension Application {
   }
 
   /// PUT
-  public func put(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func put(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3694,7 +3694,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3714,7 +3714,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func put<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3735,7 +3735,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
+  func put<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3757,7 +3757,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func put<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3779,7 +3779,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3800,7 +3800,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
+  func put<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3822,7 +3822,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3844,7 +3844,7 @@ extension Application {
   }
 
   /// PUT
-  public func put(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func put(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3864,7 +3864,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func put<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3885,7 +3885,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
+  func put<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3907,7 +3907,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func put<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3929,7 +3929,7 @@ extension Application {
   }
 
   /// PUT
-  public func put(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func put(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3950,7 +3950,7 @@ extension Application {
   }
 
   /// PUT
-  public func put<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
+  func put<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3972,7 +3972,7 @@ extension Application {
   }
 
   /// PUT
-  public func put(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func put(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PUT") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -3995,7 +3995,7 @@ extension Application {
 
 
   /// PATCH /
-  public func patch(closure: RequestType -> ResponseConvertible) {
+  func patch(closure: RequestType -> ResponseConvertible) {
     route("PATCH") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -4007,7 +4007,7 @@ extension Application {
 
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4025,7 +4025,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4044,7 +4044,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4064,7 +4064,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4085,7 +4085,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4107,7 +4107,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4129,7 +4129,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4150,7 +4150,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4172,7 +4172,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4194,7 +4194,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4214,7 +4214,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4235,7 +4235,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4257,7 +4257,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4279,7 +4279,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4300,7 +4300,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4322,7 +4322,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4344,7 +4344,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4363,7 +4363,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4383,7 +4383,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4404,7 +4404,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4426,7 +4426,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4448,7 +4448,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4469,7 +4469,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4491,7 +4491,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4513,7 +4513,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4533,7 +4533,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4554,7 +4554,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4576,7 +4576,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4598,7 +4598,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4619,7 +4619,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4641,7 +4641,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4663,7 +4663,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func patch(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4681,7 +4681,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4700,7 +4700,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4720,7 +4720,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4741,7 +4741,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4763,7 +4763,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4785,7 +4785,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4806,7 +4806,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4828,7 +4828,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4850,7 +4850,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4870,7 +4870,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4891,7 +4891,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4913,7 +4913,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4935,7 +4935,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4956,7 +4956,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -4978,7 +4978,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5000,7 +5000,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func patch(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5019,7 +5019,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5039,7 +5039,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func patch<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5060,7 +5060,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
+  func patch<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5082,7 +5082,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func patch<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5104,7 +5104,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5125,7 +5125,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
+  func patch<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5147,7 +5147,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5169,7 +5169,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func patch(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5189,7 +5189,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func patch<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5210,7 +5210,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
+  func patch<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5232,7 +5232,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func patch<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5254,7 +5254,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func patch(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5275,7 +5275,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
+  func patch<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5297,7 +5297,7 @@ extension Application {
   }
 
   /// PATCH
-  public func patch(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func patch(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("PATCH") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5320,7 +5320,7 @@ extension Application {
 
 
   /// POST /
-  public func post(closure: RequestType -> ResponseConvertible) {
+  func post(closure: RequestType -> ResponseConvertible) {
     route("POST") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -5332,7 +5332,7 @@ extension Application {
 
 
   /// POST
-  public func post<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5350,7 +5350,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5369,7 +5369,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5389,7 +5389,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5410,7 +5410,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5432,7 +5432,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5454,7 +5454,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5475,7 +5475,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5497,7 +5497,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5519,7 +5519,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5539,7 +5539,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5560,7 +5560,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5582,7 +5582,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5604,7 +5604,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5625,7 +5625,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5647,7 +5647,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5669,7 +5669,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5688,7 +5688,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5708,7 +5708,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5729,7 +5729,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5751,7 +5751,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5773,7 +5773,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5794,7 +5794,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5816,7 +5816,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5838,7 +5838,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5858,7 +5858,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5879,7 +5879,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5901,7 +5901,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5923,7 +5923,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5944,7 +5944,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5966,7 +5966,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -5988,7 +5988,7 @@ extension Application {
   }
 
   /// POST
-  public func post(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func post(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6006,7 +6006,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6025,7 +6025,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6045,7 +6045,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6066,7 +6066,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6088,7 +6088,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6110,7 +6110,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6131,7 +6131,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6153,7 +6153,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6175,7 +6175,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6195,7 +6195,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6216,7 +6216,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6238,7 +6238,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6260,7 +6260,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6281,7 +6281,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6303,7 +6303,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6325,7 +6325,7 @@ extension Application {
   }
 
   /// POST
-  public func post(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func post(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6344,7 +6344,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6364,7 +6364,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func post<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6385,7 +6385,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
+  func post<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6407,7 +6407,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func post<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6429,7 +6429,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6450,7 +6450,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
+  func post<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6472,7 +6472,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6494,7 +6494,7 @@ extension Application {
   }
 
   /// POST
-  public func post(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func post(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6514,7 +6514,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func post<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6535,7 +6535,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
+  func post<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6557,7 +6557,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func post<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6579,7 +6579,7 @@ extension Application {
   }
 
   /// POST
-  public func post(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func post(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6600,7 +6600,7 @@ extension Application {
   }
 
   /// POST
-  public func post<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
+  func post<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6622,7 +6622,7 @@ extension Application {
   }
 
   /// POST
-  public func post(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func post(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("POST") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6645,7 +6645,7 @@ extension Application {
 
 
   /// DELETE /
-  public func delete(closure: RequestType -> ResponseConvertible) {
+  func delete(closure: RequestType -> ResponseConvertible) {
     route("DELETE") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -6657,7 +6657,7 @@ extension Application {
 
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6675,7 +6675,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6694,7 +6694,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6714,7 +6714,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6735,7 +6735,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6757,7 +6757,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6779,7 +6779,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6800,7 +6800,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6822,7 +6822,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6844,7 +6844,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6864,7 +6864,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6885,7 +6885,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6907,7 +6907,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6929,7 +6929,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6950,7 +6950,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6972,7 +6972,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -6994,7 +6994,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7013,7 +7013,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7033,7 +7033,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7054,7 +7054,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7076,7 +7076,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7098,7 +7098,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7119,7 +7119,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7141,7 +7141,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7163,7 +7163,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7183,7 +7183,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7204,7 +7204,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7226,7 +7226,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7248,7 +7248,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7269,7 +7269,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7291,7 +7291,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7313,7 +7313,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func delete(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7331,7 +7331,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7350,7 +7350,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7370,7 +7370,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7391,7 +7391,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7413,7 +7413,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7435,7 +7435,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7456,7 +7456,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7478,7 +7478,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7500,7 +7500,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7520,7 +7520,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7541,7 +7541,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7563,7 +7563,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7585,7 +7585,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7606,7 +7606,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7628,7 +7628,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7650,7 +7650,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func delete(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7669,7 +7669,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7689,7 +7689,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func delete<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7710,7 +7710,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
+  func delete<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7732,7 +7732,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func delete<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7754,7 +7754,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7775,7 +7775,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
+  func delete<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7797,7 +7797,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7819,7 +7819,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func delete(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7839,7 +7839,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func delete<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7860,7 +7860,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
+  func delete<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7882,7 +7882,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func delete<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7904,7 +7904,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func delete(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7925,7 +7925,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
+  func delete<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7947,7 +7947,7 @@ extension Application {
   }
 
   /// DELETE
-  public func delete(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func delete(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("DELETE") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -7970,7 +7970,7 @@ extension Application {
 
 
   /// OPTIONS /
-  public func options(closure: RequestType -> ResponseConvertible) {
+  func options(closure: RequestType -> ResponseConvertible) {
     route("OPTIONS") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -7982,7 +7982,7 @@ extension Application {
 
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8000,7 +8000,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8019,7 +8019,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8039,7 +8039,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8060,7 +8060,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8082,7 +8082,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8104,7 +8104,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8125,7 +8125,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8147,7 +8147,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8169,7 +8169,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8189,7 +8189,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8210,7 +8210,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8232,7 +8232,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8254,7 +8254,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8275,7 +8275,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8297,7 +8297,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8319,7 +8319,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8338,7 +8338,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8358,7 +8358,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8379,7 +8379,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8401,7 +8401,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8423,7 +8423,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8444,7 +8444,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8466,7 +8466,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8488,7 +8488,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8508,7 +8508,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8529,7 +8529,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8551,7 +8551,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8573,7 +8573,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8594,7 +8594,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8616,7 +8616,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
+  func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8638,7 +8638,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func options(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8656,7 +8656,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8675,7 +8675,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8695,7 +8695,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8716,7 +8716,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8738,7 +8738,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8760,7 +8760,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8781,7 +8781,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8803,7 +8803,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8825,7 +8825,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8845,7 +8845,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8866,7 +8866,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8888,7 +8888,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8910,7 +8910,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8931,7 +8931,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8953,7 +8953,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
+  func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8975,7 +8975,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func options(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -8994,7 +8994,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9014,7 +9014,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func options<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9035,7 +9035,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
+  func options<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9057,7 +9057,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
+  func options<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9079,7 +9079,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9100,7 +9100,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
+  func options<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9122,7 +9122,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
+  func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9144,7 +9144,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func options(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9164,7 +9164,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func options<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9185,7 +9185,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
+  func options<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9207,7 +9207,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
+  func options<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9229,7 +9229,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func options(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9250,7 +9250,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
+  func options<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -9272,7 +9272,7 @@ extension Application {
   }
 
   /// OPTIONS
-  public func options(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
+  func options(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
     route("OPTIONS") { request in
       let parser = ParameterParser(path: request.path)
 
