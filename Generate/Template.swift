@@ -20,7 +20,7 @@ func validateParameter(parser: ParameterParser, _ value: String) -> String? {
 extension Application {
 {% for method in methods %}
   /// {{ method }} /
-  func {{ method|lowercase }}(closure: RequestType -> ResponseConvertible) {
+  public func {{ method|lowercase }}(closure: RequestType -> ResponseConvertible) {
     route("{{ method }}") { request in
       if request.path == "/" {
         return { closure(request) }
@@ -32,7 +32,7 @@ extension Application {
 
 {% for parameters in combinations %}{% hasVariables %}
   /// {{ method }}
-  func {{ method|lowercase }}{% if hasVariables %}<{% for variable in variables %}P{{ variable }} : ParameterConvertible{% ifnot forloop.last %}, {% endif %}{% endfor %}>{% endif %}({% for variable in parameters %}{% ifnot forloop.first %}_ {% endif %}p{{ forloop.counter }}: {% if variable %}Parameter{% else %}String{% endif %}, {% endfor %} _ closure: (RequestType{% for variable in parameters %}{% if variable %}, P{{ forloop.counter }}{% endif %}{% endfor %}) -> ResponseConvertible) {
+  public func {{ method|lowercase }}{% if hasVariables %}<{% for variable in variables %}P{{ variable }} : ParameterConvertible{% ifnot forloop.last %}, {% endif %}{% endfor %}>{% endif %}({% for variable in parameters %}{% ifnot forloop.first %}_ {% endif %}p{{ forloop.counter }}: {% if variable %}Parameter{% else %}String{% endif %}, {% endfor %} _ closure: (RequestType{% for variable in parameters %}{% if variable %}, P{{ forloop.counter }}{% endif %}{% endfor %}) -> ResponseConvertible) {
     route("{{ method }}") { request in
       let parser = ParameterParser(path: request.path)
 
@@ -53,14 +53,14 @@ extension Application {
 }
 
 {% for method in methods %}
-/// {{ method }} Root
-func {{ method|lowercase }}(closure: (RequestType) -> ResponseConvertible) {
+/// {{ method }} /
+public func {{ method|lowercase }}(closure: (RequestType) -> ResponseConvertible) {
   application.{{ method|lowercase }}(closure)
 }
 
 {% for parameters in combinations %}{% hasVariables %}
 /// {{ method }}
-func {{ method|lowercase }}{% if hasVariables %}<{% for variable in variables %}P{{ variable }} : ParameterConvertible{% ifnot forloop.last %}, {% endif %}{% endfor %}>{% endif %}({% for variable in parameters %}{% ifnot forloop.first %}_ {% endif %}p{{ forloop.counter }}: {% if variable %}Parameter{% else %}String{% endif %}, {% endfor %} _ closure: (RequestType{% for variable in parameters %}{% if variable %}, P{{ forloop.counter }}{% endif %}{% endfor %}) -> ResponseConvertible) {
+public func {{ method|lowercase }}{% if hasVariables %}<{% for variable in variables %}P{{ variable }} : ParameterConvertible{% ifnot forloop.last %}, {% endif %}{% endfor %}>{% endif %}({% for variable in parameters %}{% ifnot forloop.first %}_ {% endif %}p{{ forloop.counter }}: {% if variable %}Parameter{% else %}String{% endif %}, {% endfor %} _ closure: (RequestType{% for variable in parameters %}{% if variable %}, P{{ forloop.counter }}{% endif %}{% endfor %}) -> ResponseConvertible) {
   {{ method|lowercase }}({% for parameter in parameters %}p{{ forloop.counter }}, {% endfor %}closure)
 }
 {% endfor %}{% endfor %}
