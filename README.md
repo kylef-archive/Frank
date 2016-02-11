@@ -9,12 +9,12 @@ path routing.
 import Frank
 
 // Handle GET requests to path /
-get {
+get { request in
   return "Hello World"
 }
 
 // Handle GET requests to path /{username}
-get(*) { (username: String) in
+get(*) { (request, username: String) in
   return "Hello \(username)"
 }
 ```
