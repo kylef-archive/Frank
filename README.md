@@ -90,6 +90,30 @@ Wildcard parameters may be of any type that conforms to `ParameterConvertible`,
 this allows you to match against custom types providing you conform to
 `ParameterConvertible`.
 
+For example, we can create a Status enum which can be Open or Closed which
+conforms to `ParameterConvertible`:
+
+```swift
+enum Status : ParameterConvertible {
+  case Open
+  case Closed
+
+  init?(parser: ParameterParser) {
+    switch parser.shift() ?? "" {
+      case "open":
+        self = .Open
+      case "closed":
+        self = .Closed
+      default:
+        return nil
+    }
+  }
+}
+
+get("issues", *) { (request, status: Status) in
+  return "Issues using status: \(status)"
+}
+```
 #### Return Values
 
 The return value of route blocks takes a type that conforms to the
