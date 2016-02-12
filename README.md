@@ -13,8 +13,8 @@ get { request in
   return "Hello World"
 }
 
-// Handle GET requests to path /{username}
-get(*) { (request, username: String) in
+// Handle GET requests to path /users/{username}
+get("users", *) { (request, username: String) in
   return "Hello \(username)"
 }
 ```
