@@ -61,6 +61,6 @@ public func {{ method|lowercase }}(closure: (RequestType) -> ResponseConvertible
 {% for parameters in combinations %}{% hasVariables %}
 /// {{ method }}
 public func {{ method|lowercase }}{% if hasVariables %}<{% for variable in variables %}P{{ variable }} : ParameterConvertible{% ifnot forloop.last %}, {% endif %}{% endfor %}>{% endif %}({% for variable in parameters %}{% ifnot forloop.first %}_ {% endif %}p{{ forloop.counter }}: {% if variable %}Parameter{% else %}String{% endif %}, {% endfor %} _ closure: (RequestType{% for variable in parameters %}{% if variable %}, P{{ forloop.counter }}{% endif %}{% endfor %}) -> ResponseConvertible) {
-  {{ method|lowercase }}({% for parameter in parameters %}p{{ forloop.counter }}, {% endfor %}closure)
+  application.{{ method|lowercase }}({% for parameter in parameters %}p{{ forloop.counter }}, {% endfor %}closure)
 }
 {% endfor %}{% endfor %}

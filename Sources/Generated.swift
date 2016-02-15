@@ -9305,312 +9305,312 @@ public func get(closure: (RequestType) -> ResponseConvertible) {
 
 /// GET
 public func get<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  get(p1, closure)
+  application.get(p1, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  get(p1, p2, closure)
+  application.get(p1, p2, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  get(p1, p2, closure)
+  application.get(p1, p2, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  get(p1, closure)
+  application.get(p1, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  get(p1, p2, closure)
+  application.get(p1, p2, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  get(p1, p2, closure)
+  application.get(p1, p2, closure)
 }
 
 /// GET
 public func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  get(p1, p2, p3, closure)
+  application.get(p1, p2, p3, closure)
 }
 
 /// GET
 public func get<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, closure)
+  application.get(p1, p2, p3, p4, closure)
 }
 
 /// GET
 public func get<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// GET
 public func get(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  get(p1, p2, p3, p4, p5, closure)
+  application.get(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD /
@@ -9621,312 +9621,312 @@ public func head(closure: (RequestType) -> ResponseConvertible) {
 
 /// HEAD
 public func head<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  head(p1, closure)
+  application.head(p1, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  head(p1, p2, closure)
+  application.head(p1, p2, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  head(p1, p2, closure)
+  application.head(p1, p2, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  head(p1, closure)
+  application.head(p1, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  head(p1, p2, closure)
+  application.head(p1, p2, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  head(p1, p2, closure)
+  application.head(p1, p2, closure)
 }
 
 /// HEAD
 public func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  head(p1, p2, p3, closure)
+  application.head(p1, p2, p3, closure)
 }
 
 /// HEAD
 public func head<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, closure)
+  application.head(p1, p2, p3, p4, closure)
 }
 
 /// HEAD
 public func head<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// HEAD
 public func head(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  head(p1, p2, p3, p4, p5, closure)
+  application.head(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT /
@@ -9937,312 +9937,312 @@ public func put(closure: (RequestType) -> ResponseConvertible) {
 
 /// PUT
 public func put<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  put(p1, closure)
+  application.put(p1, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  put(p1, p2, closure)
+  application.put(p1, p2, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  put(p1, p2, closure)
+  application.put(p1, p2, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  put(p1, closure)
+  application.put(p1, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  put(p1, p2, closure)
+  application.put(p1, p2, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  put(p1, p2, closure)
+  application.put(p1, p2, closure)
 }
 
 /// PUT
 public func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  put(p1, p2, p3, closure)
+  application.put(p1, p2, p3, closure)
 }
 
 /// PUT
 public func put<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, closure)
+  application.put(p1, p2, p3, p4, closure)
 }
 
 /// PUT
 public func put<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PUT
 public func put(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  put(p1, p2, p3, p4, p5, closure)
+  application.put(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH /
@@ -10253,312 +10253,312 @@ public func patch(closure: (RequestType) -> ResponseConvertible) {
 
 /// PATCH
 public func patch<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  patch(p1, closure)
+  application.patch(p1, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  patch(p1, p2, closure)
+  application.patch(p1, p2, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  patch(p1, p2, closure)
+  application.patch(p1, p2, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  patch(p1, closure)
+  application.patch(p1, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  patch(p1, p2, closure)
+  application.patch(p1, p2, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  patch(p1, p2, closure)
+  application.patch(p1, p2, closure)
 }
 
 /// PATCH
 public func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  patch(p1, p2, p3, closure)
+  application.patch(p1, p2, p3, closure)
 }
 
 /// PATCH
 public func patch<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, closure)
+  application.patch(p1, p2, p3, p4, closure)
 }
 
 /// PATCH
 public func patch<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// PATCH
 public func patch(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  patch(p1, p2, p3, p4, p5, closure)
+  application.patch(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST /
@@ -10569,312 +10569,312 @@ public func post(closure: (RequestType) -> ResponseConvertible) {
 
 /// POST
 public func post<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  post(p1, closure)
+  application.post(p1, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  post(p1, p2, closure)
+  application.post(p1, p2, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  post(p1, p2, closure)
+  application.post(p1, p2, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  post(p1, closure)
+  application.post(p1, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  post(p1, p2, closure)
+  application.post(p1, p2, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  post(p1, p2, closure)
+  application.post(p1, p2, closure)
 }
 
 /// POST
 public func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  post(p1, p2, p3, closure)
+  application.post(p1, p2, p3, closure)
 }
 
 /// POST
 public func post<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, closure)
+  application.post(p1, p2, p3, p4, closure)
 }
 
 /// POST
 public func post<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// POST
 public func post(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  post(p1, p2, p3, p4, p5, closure)
+  application.post(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE /
@@ -10885,312 +10885,312 @@ public func delete(closure: (RequestType) -> ResponseConvertible) {
 
 /// DELETE
 public func delete<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  delete(p1, closure)
+  application.delete(p1, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  delete(p1, p2, closure)
+  application.delete(p1, p2, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  delete(p1, p2, closure)
+  application.delete(p1, p2, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  delete(p1, closure)
+  application.delete(p1, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  delete(p1, p2, closure)
+  application.delete(p1, p2, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  delete(p1, p2, closure)
+  application.delete(p1, p2, closure)
 }
 
 /// DELETE
 public func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  delete(p1, p2, p3, closure)
+  application.delete(p1, p2, p3, closure)
 }
 
 /// DELETE
 public func delete<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, closure)
+  application.delete(p1, p2, p3, p4, closure)
 }
 
 /// DELETE
 public func delete<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// DELETE
 public func delete(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  delete(p1, p2, p3, p4, p5, closure)
+  application.delete(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS /
@@ -11201,311 +11201,311 @@ public func options(closure: (RequestType) -> ResponseConvertible) {
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible>(p1: Parameter,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  options(p1, closure)
+  application.options(p1, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  options(p1, p2, closure)
+  application.options(p1, p2, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P3, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P2, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P2, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P2 : ParameterConvertible>(p1: Parameter, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P2) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  options(p1, p2, closure)
+  application.options(p1, p2, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P3, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P3 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P1, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P1, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P4 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P1, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible, P5 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P1, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P1 : ParameterConvertible>(p1: Parameter, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P1) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options(p1: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  options(p1, closure)
+  application.options(p1, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  options(p1, p2, closure)
+  application.options(p1, p2, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P3, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P3 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P2, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P2, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P2, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P2, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P2 : ParameterConvertible>(p1: String, _ p2: Parameter, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType, P2) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options(p1: String, _ p2: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  options(p1, p2, closure)
+  application.options(p1, p2, closure)
 }
 
 /// OPTIONS
 public func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P3 : ParameterConvertible, P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P3, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P3 : ParameterConvertible, P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P3, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P3 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P3, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P3 : ParameterConvertible>(p1: String, _ p2: String, _ p3: Parameter, _ p4: String, _ p5: String,  _ closure: (RequestType, P3) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options(p1: String, _ p2: String, _ p3: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  options(p1, p2, p3, closure)
+  application.options(p1, p2, p3, closure)
 }
 
 /// OPTIONS
 public func options<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P4 : ParameterConvertible, P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: Parameter,  _ closure: (RequestType, P4, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options<P4 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: Parameter, _ p5: String,  _ closure: (RequestType, P4) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options(p1: String, _ p2: String, _ p3: String, _ p4: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, closure)
+  application.options(p1, p2, p3, p4, closure)
 }
 
 /// OPTIONS
 public func options<P5 : ParameterConvertible>(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: Parameter,  _ closure: (RequestType, P5) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
 /// OPTIONS
 public func options(p1: String, _ p2: String, _ p3: String, _ p4: String, _ p5: String,  _ closure: (RequestType) -> ResponseConvertible) {
-  options(p1, p2, p3, p4, p5, closure)
+  application.options(p1, p2, p3, p4, p5, closure)
 }
 
