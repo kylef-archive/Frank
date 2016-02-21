@@ -46,7 +46,84 @@ which can be deployed to Heroku.
 
 ### Usage
 
-### Routes
+#### Routes
+
+Routes are constructed with passing your path split by slashes `/` as
+separate arguments to the HTTP method (e.g. `get`, `post` etc) functions.
+
+For example, to match a path of `/users/kyle/followers` you can use the following:
+
+```swift
+get("users", "kyle", "followers") { request in
+
+}
+```
+
+You may pass path components along with wildcard (`*`) to match variables in
+paths. The wildcard is a placemarker to annotate where the variable path
+components are in your path. Frank allows you to use any number of wildcards
+in any place of the path, allowing you to match all paths.
+
+The wildcards will map directly to parameters in the path and the variables
+passed into your callback. Wildcard parameters are translated to the type
+specified in your closure.
+
+```swift
+// /users/{username}
+get("users", *) { (request, username: String) in
+  return "Hi \(username)"
+}
+
+// /users/{username}/followers
+get("users", *, "followers") { (request, username: String) in
+  return "\(username) has 5 followers"
+}
+```
+
+You may place any type that conforms to `ParameterConvertible`
+in your callback, this allows the types to be correctly
+converted to your type or user will face a 404 since the
+URL will be invalid.
+
+```swift
+// /users/{userid}
+get("users", *) { (request, userid: Int) in
+  return "Hi user with ID: \(userid)"
+}
+```
+
+##### Custom Parameter Types
+
+Wildcard parameters may be of any type that conforms to `ParameterConvertible`,
+this allows you to match against custom types providing you conform to
+`ParameterConvertible`.
+
+For example, we can create a Status enum which can be Open or Closed which
+conforms to `ParameterConvertible`:
+
+```swift
+enum Status : ParameterConvertible {
+  case Open
+  case Closed
+
+  init?(parser: ParameterParser) {
+    switch parser.shift() ?? "" {
+      case "open":
+        self = .Open
+      case "closed":
+        self = .Closed
+      default:
+        return nil
+    }
+  }
+}
+
+get("issues", *) { (request, status: Status) in
+  return "Issues using status: \(status)"
+}
+```
+
+##### Adding routes
 
 Routes are matched in the order they are defined. The first route that matches
 the request is invoked.
@@ -77,43 +154,6 @@ options {
 }
 ```
 
-You may pass path components along with wildcard (`*`) to match variables in
-paths.
-
-```swift
-get("users", *) { (request, username: String) in
-  return "Hi \(username)"
-}
-```
-
-Wildcard parameters may be of any type that conforms to `ParameterConvertible`,
-this allows you to match against custom types providing you conform to
-`ParameterConvertible`.
-
-For example, we can create a Status enum which can be Open or Closed which
-conforms to `ParameterConvertible`:
-
-```swift
-enum Status : ParameterConvertible {
-  case Open
-  case Closed
-
-  init?(parser: ParameterParser) {
-    switch parser.shift() ?? "" {
-      case "open":
-        self = .Open
-      case "closed":
-        self = .Closed
-      default:
-        return nil
-    }
-  }
-}
-
-get("issues", *) { (request, status: Status) in
-  return "Issues using status: \(status)"
-}
-```
 #### Return Values
 
 The return value of route blocks takes a type that conforms to the
