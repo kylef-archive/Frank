@@ -27,7 +27,7 @@ import PackageDescription
 let package = Package(
   name: "Hello",
   dependencies: [
-    .Package(url: "https://github.com/nestproject/Frank.git", majorVersion: 0, minor: 2)
+    .Package(url: "https://github.com/nestproject/Frank.git", majorVersion: 0, minor: 3)
   ]
 )
 ```
@@ -174,7 +174,7 @@ get {
 }
 
 post {
-  return Response(.Created, body: "User created")
+  return Response(.Created, content: "User created")
 }
 ```
 
@@ -196,7 +196,7 @@ func stencil(path: String, _ context: [String: Any]? = nil) -> ResponseConvertib
   do {
     let template = try Template(path: Path(path))
     let body = try template.render(Context(dictionary: context))
-    return Response(.Ok, headers: [("Content-Type", "text/html")], body: body)
+    return Response(.Ok, headers: [("Content-Type", "text/html")], content: body)
   } catch {
     return Response(.InternalServerError)
   }
