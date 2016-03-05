@@ -4,6 +4,21 @@ import Inquiline
 @testable import Frank
 
 
+extension ResponseType {
+  mutating func content() -> String? {
+    if let body = body {
+      var bytes: [UInt8] = []
+      var body = body
+      while let nextBytes = body.next() { bytes += nextBytes }
+      bytes.append(0)
+      return String.fromCString(bytes.map { CChar($0) })
+    }
+
+    return nil
+  }
+}
+
+
 func testApplication() {
   describe("Application") {
     let app = Application()
@@ -17,29 +32,29 @@ func testApplication() {
     }
 
     $0.it("returns my registered root route") {
-      let response = app.call(Request(method: "GET", path: "/"))
+      var response = app.call(Request(method: "GET", path: "/"))
 
       try expect(response.statusLine) == "200 OK"
-      try expect(response.body) == "Custom Route"
+      try expect(response.content()) == "Custom Route"
     }
 
     $0.it("returns my registered parameter route") {
-      let response = app.call(Request(method: "GET", path: "/users/kyle"))
+      var response = app.call(Request(method: "GET", path: "/users/kyle"))
 
       try expect(response.statusLine) == "200 OK"
-      try expect(response.body) == "Hello kyle"
+      try expect(response.content()) == "Hello kyle"
     }
 
     $0.it("returns a 405 when there is a route for the path, but not for the method") {
       let response = app.call(Request(method: "DELETE", path: "/"))
 
-      try expect(response.statusLine) == "405 METHOD NOT ALLOWED"
+      try expect(response.statusLine) == "405 Method Not Allowed"
     }
 
     $0.it("returns a 404 for unmatched paths") {
       let response = app.call(Request(method: "GET", path: "/user/kyle"))
 
-      try expect(response.statusLine) == "404 NOT FOUND"
+      try expect(response.statusLine) == "404 Not Found"
     }
   }
 }
