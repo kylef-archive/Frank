@@ -1,3 +1,0 @@
-testApplication()
-testParameterParser()
-testParameterConvertible()

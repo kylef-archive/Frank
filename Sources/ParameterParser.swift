@@ -2,7 +2,7 @@ public class ParameterParser {
   var components: [String]
 
   init(path: String) {
-    components = path.characters.split("/").map(String.init)
+    components = path.characters.split(separator: "/").map(String.init)
   }
 
   public var isEmpty: Bool {

@@ -36,8 +36,8 @@ extension Application {
     route("{{ method }}") { request in
       let parser = ParameterParser(path: request.path)
 
-      if let{% for variable in parameters %}
-        {% if variable %}p{{ forloop.counter }} = P{{ forloop.counter }}(parser: parser){% else %}_ = validateParameter(parser, p{{ forloop.counter }}){% endif %}{% ifnot forloop.last %},{% endif %}{% endfor %}
+      if {% for variable in parameters %}
+        let {% if variable %}p{{ forloop.counter }} = P{{ forloop.counter }}(parser: parser){% else %}_ = validateParameter(parser, p{{ forloop.counter }}){% endif %}{% ifnot forloop.last %},{% endif %}{% endfor %}
         where parser.isEmpty
       {
         return {

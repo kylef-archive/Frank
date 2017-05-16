@@ -14,11 +14,11 @@ let application: Application = {
 }()
 
 
-@noreturn func serve() {
+func serve() -> Never {
   Curassow.serve(application.call)
 }
 
 
-public func call(request: RequestType) -> ResponseType {
+public func call(_ request: RequestType) -> ResponseType {
   return application.call(request)
 }

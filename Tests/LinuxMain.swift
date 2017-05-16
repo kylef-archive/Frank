@@ -1,0 +1,3 @@
+import FrankTests
+
+test()

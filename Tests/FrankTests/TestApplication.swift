@@ -11,7 +11,7 @@ extension ResponseType {
       var body = body
       while let nextBytes = body.next() { bytes += nextBytes }
       bytes.append(0)
-      return String.fromCString(bytes.map { CChar($0) })
+      return String(cString: bytes.map { CChar($0) })
     }
 
     return nil

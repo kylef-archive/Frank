@@ -103,15 +103,15 @@ conforms to `ParameterConvertible`:
 
 ```swift
 enum Status : ParameterConvertible {
-  case Open
-  case Closed
+  case open
+  case closed
 
   init?(parser: ParameterParser) {
     switch parser.shift() ?? "" {
       case "open":
-        self = .Open
+        self = .open
       case "closed":
-        self = .Closed
+        self = .closed
       default:
         return nil
     }
@@ -170,11 +170,11 @@ Return a full response:
 
 ```swift
 get {
-  return Response(.Ok, headers: ["Custom-Header": "value"])
+  return Response(.ok, headers: ["Custom-Header": "value"])
 }
 
 post {
-  return Response(.Created, content: "User created")
+  return Response(.created, content: "User created")
 }
 ```
 
@@ -196,9 +196,9 @@ func stencil(path: String, _ context: [String: Any]? = nil) -> ResponseConvertib
   do {
     let template = try Template(path: Path(path))
     let body = try template.render(Context(dictionary: context))
-    return Response(.Ok, headers: [("Content-Type", "text/html")], content: body)
+    return Response(.ok, headers: [("Content-Type", "text/html")], content: body)
   } catch {
-    return Response(.InternalServerError)
+    return Response(.internalServerError)
   }
 }
 ```

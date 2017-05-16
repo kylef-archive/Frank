@@ -10,7 +10,7 @@ public protocol ResponseConvertible {
 
 extension String : ResponseConvertible {
   public func asResponse() -> ResponseType {
-    return Response(.Ok, content: self)
+    return Response(.ok, content: self)
   }
 }
 
