@@ -27,7 +27,7 @@ import PackageDescription
 let package = Package(
   name: "Hello",
   dependencies: [
-    .Package(url: "https://github.com/nestproject/Frank.git", majorVersion: 0, minor: 3)
+    .Package(url: "https://github.com/kylef/Frank.git", majorVersion: 0, minor: 4)
   ]
 )
 ```
