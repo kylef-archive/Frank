@@ -7,7 +7,6 @@ This API is unfinished. As its updated it will be pushed. We are in the process 
 ##### `Sources/main.swift`
 
 ```swift
-import Frank
 
 // Handle GET requests to path /
 get { request in
