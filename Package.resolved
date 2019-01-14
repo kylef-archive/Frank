@@ -12,7 +12,7 @@
       },
       {
         "package": "Curassow",
-        "repositoryURL": "https://github.com/kylef/Curassow.git",
+        "repositoryURL": "https://github.com/starplayr/Curassow.git",
         "state": {
           "branch": null,
           "revision": "dd8a376316b31b4c2e14b256fdfd4cc27464c973",
@@ -30,7 +30,7 @@
       },
       {
         "package": "Inquiline",
-        "repositoryURL": "https://github.com/nestproject/Inquiline.git",
+        "repositoryURL": "https://github.com/starplayr/Inquiline.git",
         "state": {
           "branch": null,
           "revision": "3b507f7f7a1b916e57408e3c93f3df2749cbfe02",
