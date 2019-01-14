@@ -1,12 +1,12 @@
-# Frank
+# Xanilla is a fork of Frank
 
-Frank is a DSL for quickly writing web applications in Swift with type-safe
-path routing.
+Xanilla is a Swift based SiriusXM Radio backend for StarPlayrX Radio client. The backend can also run standalone from StarPlayr. It is loosely based on SXM.py. The goal is a 100% Swift embedded or external web server for personal use.
+
+This API is unfinished. As its updated it will be pushed. We are in the process of upgrading the Swift 3.x code in Frank's depnedencies as Swift 3.x will be removed soon from macOS Systems.  We have hopes to bring this emdedded web server to iOS clients or at the very least have an API that an iOS client could access externally.
 
 ##### `Sources/main.swift`
 
 ```swift
-import Frank
 
 // Handle GET requests to path /
 get { request in
